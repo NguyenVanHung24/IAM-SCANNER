@@ -2,6 +2,92 @@
 
 A powerful multi-account AWS IAM privilege escalation vulnerability scanner that identifies potentially dangerous permission combinations across IAM roles and users.
 
+## 📺 Demo
+
+![Scan SSO](demo/scan_sso.png)
+![Scan Environment](demo/scan_evn.png)
+![Scan Landing Zone](demo/scanlandingzone.png)
+
+
+
+## 📊 Demo Result
+
+### CSV Format
+
+The CSV output provides a flattened view of all findings, perfect for quick analysis or importing into other tools.
+
+| Column | Description |
+|--------|-------------|
+| `account` | AWS Account ID |
+| `role` | Role or User name |
+| `detect_policy` | Detected vulnerability pattern |
+| `severity` | CRITICAL, HIGH, MEDIUM, or LOW |
+| `category` | Finding category (e.g., existing-passrole, principal-access) |
+| `service` | AWS services involved |
+
+**Example Output:**
+```csv
+account,role,detect_policy,severity,category,service
+01234567895,demo,ssm:SendCommand,HIGH,existing-passrole,"ssm, ec2"
+01234567895,demo,sts:AssumeRole,CRITICAL,principal-access,sts
+01234567895,EC2_escalation_role,iam:PassRole + ec2:RunInstances,HIGH,new-passrole,"iam, ec2"
+```
+
+### JSON Format
+
+The JSON output provides detailed information including full descriptions of findings, matched permissions, and scan statistics.
+
+**Example Output:**
+```json
+{
+  "account_id": "xxxxxxxxx",
+  "total_roles": 34,
+  "scanned_roles": 8,
+  "ignored_roles": 26,
+  "vulnerable_roles": [
+    {
+      "role_name": "demo",
+      "role_arn": "arn:aws:iam::xxxxxxxxx:role/demo",
+      "findings": [
+        {
+          "pattern": "ssm:SendCommand",
+          "category": "existing-passrole",
+          "severity": "HIGH",
+          "description": "The `ssm:SendCommand` permission allows a principal to execute commands on any EC2 instance on which they have this permission, using SSM Run Command....",
+          "services": [
+            "ssm",
+            "ec2"
+          ],
+          "matched_permissions": [
+            "ssm:sendcommand"
+          ]
+        },
+        {
+          "pattern": "sts:AssumeRole",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `sts:AssumeRole` permission can assume IAM roles that trust them in their trust policy...",
+          "services": [
+            "sts"
+          ],
+          "matched_permissions": [
+            "sts:assumerole"
+          ]
+        }
+      ],
+      "total_permissions": 12
+    }
+  ],
+  "ignored_role_details": [
+    {
+      "role_name": "AWSServiceRoleForConfig",
+      "reason": "Standard Service Role (Trusted: config.amazonaws.com)"
+    }
+  ]
+}
+```
+
+
 ## 🎯 Overview
 
 This scanner analyzes AWS IAM roles and users to detect privilege escalation paths and dangerous permission patterns based on known attack vectors. It supports both single account and multi-landing zone deployments with parallel scanning for optimal performance.
@@ -173,33 +259,6 @@ Create account list files (one account ID per line):
 01234567895
 ```
 
-## 📊 Output Formats
-
-### CSV Format
-
-| Column | Description |
-|--------|-------------|
-| `account` | AWS Account ID |
-| `role` | Role or User name |
-| `detect_policy` | Detected vulnerability pattern |
-| `severity` | CRITICAL, HIGH, MEDIUM, or LOW |
-| `category` | Finding category |
-| `service` | AWS services involved |
-
-**Example:**
-```csv
-account,role,detect_policy,severity,category,service
-01234567895,EC2_escalation_role,iam:PassRole + lambda:CreateFunction,HIGH,Privilege Escalation,"iam, lambda"
-01234567895,DeveloperRole,iam:PutUserPolicy,CRITICAL,Privilege Escalation,iam
-```
-
-### JSON Format
-
-Detailed hierarchical structure with:
-- Scan metadata (timestamps, configuration)
-- Per-landing-zone results
-- Per-account breakdown
-- Detailed findings with descriptions and matched permissions
 
 ## 🔍 Detection Patterns
 
@@ -299,13 +358,10 @@ Ensure your IAM role/user has these permissions:
 
 Contributions are welcome! Areas for improvement:
 - Additional privilege escalation patterns
-- Support for other AWS services
+- Fillter IAM roles that False positive
+- UI to show graph of IAM roles
 - Enhanced filtering options
 - Performance optimizations
-
-## 📄 License
-
-[Add your license here]
 
 ## 👥 Author
 

@@ -1,0 +1,1805 @@
+{
+  "account_id": "089930078162",
+  "total_roles": 125,
+  "scanned_roles": 92,
+  "ignored_roles": 33,
+  "vulnerable_roles": [
+    {
+      "role_name": "audit-test",
+      "role_arn": "arn:aws:iam::089930078162:role/audit-test",
+      "findings": [
+        {
+          "pattern": "sts:AssumeRole",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `sts:AssumeRole` permission can assume IAM roles that trust them in their trust policy. We refer to this as two-way trust, or bidirec...",
+          "services": [
+            "sts"
+          ],
+          "matched_permissions": [
+            "sts:assumerole"
+          ]
+        }
+      ],
+      "total_permissions": 1
+    },
+    {
+      "role_name": "SO0111-AttachSSMPermissionsToEC2-asr",
+      "role_arn": "arn:aws:iam::089930078162:role/SO0111-AttachSSMPermissionsToEC2-asr",
+      "findings": [
+        {
+          "pattern": "iam:AttachRolePolicy",
+          "category": "self-escalation",
+          "severity": "CRITICAL",
+          "description": "A principal with `iam:AttachRolePolicy` can attach AWS managed policies (including AdministratorAccess) or customer-managed policies to IAM roles. If...",
+          "services": [
+            "iam"
+          ],
+          "matched_permissions": [
+            "iam:attachrolepolicy"
+          ]
+        },
+        {
+          "pattern": "sts:AssumeRole",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `sts:AssumeRole` permission can assume IAM roles that trust them in their trust policy. We refer to this as two-way trust, or bidirec...",
+          "services": [
+            "sts"
+          ],
+          "matched_permissions": [
+            "sts:assumerole"
+          ]
+        }
+      ],
+      "total_permissions": 18
+    },
+    {
+      "role_name": "SO0111-AttachServiceVPCEndpoint-asr",
+      "role_arn": "arn:aws:iam::089930078162:role/SO0111-AttachServiceVPCEndpoint-asr",
+      "findings": [
+        {
+          "pattern": "sts:AssumeRole",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `sts:AssumeRole` permission can assume IAM roles that trust them in their trust policy. We refer to this as two-way trust, or bidirec...",
+          "services": [
+            "sts"
+          ],
+          "matched_permissions": [
+            "sts:assumerole"
+          ]
+        }
+      ],
+      "total_permissions": 13
+    },
+    {
+      "role_name": "SO0111-BlockSSMDocumentPublicAccess-asr",
+      "role_arn": "arn:aws:iam::089930078162:role/SO0111-BlockSSMDocumentPublicAccess-asr",
+      "findings": [
+        {
+          "pattern": "sts:AssumeRole",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `sts:AssumeRole` permission can assume IAM roles that trust them in their trust policy. We refer to this as two-way trust, or bidirec...",
+          "services": [
+            "sts"
+          ],
+          "matched_permissions": [
+            "sts:assumerole"
+          ]
+        }
+      ],
+      "total_permissions": 10
+    },
+    {
+      "role_name": "SO0111-ConfigureAutoScalingLaunchConfigNoPublicIP-asr",
+      "role_arn": "arn:aws:iam::089930078162:role/SO0111-ConfigureAutoScalingLaunchConfigNoPublicIP-asr",
+      "findings": [
+        {
+          "pattern": "sts:AssumeRole",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `sts:AssumeRole` permission can assume IAM roles that trust them in their trust policy. We refer to this as two-way trust, or bidirec...",
+          "services": [
+            "sts"
+          ],
+          "matched_permissions": [
+            "sts:assumerole"
+          ]
+        }
+      ],
+      "total_permissions": 14
+    },
+    {
+      "role_name": "SO0111-ConfigureAutoScalingLaunchConfigToRequireIMDSv2-asr",
+      "role_arn": "arn:aws:iam::089930078162:role/SO0111-ConfigureAutoScalingLaunchConfigToRequireIMDSv2-asr",
+      "findings": [
+        {
+          "pattern": "sts:AssumeRole",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `sts:AssumeRole` permission can assume IAM roles that trust them in their trust policy. We refer to this as two-way trust, or bidirec...",
+          "services": [
+            "sts"
+          ],
+          "matched_permissions": [
+            "sts:assumerole"
+          ]
+        }
+      ],
+      "total_permissions": 14
+    },
+    {
+      "role_name": "SO0111-ConfigureDynamoDBAutoScaling-asr",
+      "role_arn": "arn:aws:iam::089930078162:role/SO0111-ConfigureDynamoDBAutoScaling-asr",
+      "findings": [
+        {
+          "pattern": "sts:AssumeRole",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `sts:AssumeRole` permission can assume IAM roles that trust them in their trust policy. We refer to this as two-way trust, or bidirec...",
+          "services": [
+            "sts"
+          ],
+          "matched_permissions": [
+            "sts:assumerole"
+          ]
+        }
+      ],
+      "total_permissions": 11
+    },
+    {
+      "role_name": "SO0111-ConfigureS3BucketLogging-asr",
+      "role_arn": "arn:aws:iam::089930078162:role/SO0111-ConfigureS3BucketLogging-asr",
+      "findings": [
+        {
+          "pattern": "sts:AssumeRole",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `sts:AssumeRole` permission can assume IAM roles that trust them in their trust policy. We refer to this as two-way trust, or bidirec...",
+          "services": [
+            "sts"
+          ],
+          "matched_permissions": [
+            "sts:assumerole"
+          ]
+        }
+      ],
+      "total_permissions": 12
+    },
+    {
+      "role_name": "SO0111-ConfigureS3BucketPublicAccessBlock-asr",
+      "role_arn": "arn:aws:iam::089930078162:role/SO0111-ConfigureS3BucketPublicAccessBlock-asr",
+      "findings": [
+        {
+          "pattern": "sts:AssumeRole",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `sts:AssumeRole` permission can assume IAM roles that trust them in their trust policy. We refer to this as two-way trust, or bidirec...",
+          "services": [
+            "sts"
+          ],
+          "matched_permissions": [
+            "sts:assumerole"
+          ]
+        }
+      ],
+      "total_permissions": 10
+    },
+    {
+      "role_name": "SO0111-ConfigureSNSTopicForStack-asr",
+      "role_arn": "arn:aws:iam::089930078162:role/SO0111-ConfigureSNSTopicForStack-asr",
+      "findings": [
+        {
+          "pattern": "cloudformation:UpdateStack",
+          "category": "existing-passrole",
+          "severity": "HIGH",
+          "description": "A principal with `cloudformation:UpdateStack` can modify an existing CloudFormation stack that has an administrative service role attached. CloudForm...",
+          "services": [
+            "cloudformation",
+            "iam"
+          ],
+          "matched_permissions": [
+            "cloudformation:updatestack"
+          ]
+        },
+        {
+          "pattern": "sts:AssumeRole",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `sts:AssumeRole` permission can assume IAM roles that trust them in their trust policy. We refer to this as two-way trust, or bidirec...",
+          "services": [
+            "sts"
+          ],
+          "matched_permissions": [
+            "sts:assumerole"
+          ]
+        }
+      ],
+      "total_permissions": 15
+    },
+    {
+      "role_name": "SO0111-CreateCloudTrailMultiRegionTrail-asr",
+      "role_arn": "arn:aws:iam::089930078162:role/SO0111-CreateCloudTrailMultiRegionTrail-asr",
+      "findings": [
+        {
+          "pattern": "sts:AssumeRole",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `sts:AssumeRole` permission can assume IAM roles that trust them in their trust policy. We refer to this as two-way trust, or bidirec...",
+          "services": [
+            "sts"
+          ],
+          "matched_permissions": [
+            "sts:assumerole"
+          ]
+        }
+      ],
+      "total_permissions": 27
+    },
+    {
+      "role_name": "SO0111-CreateAccessLoggingBucket-asr",
+      "role_arn": "arn:aws:iam::089930078162:role/SO0111-CreateAccessLoggingBucket-asr",
+      "findings": [
+        {
+          "pattern": "sts:AssumeRole",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `sts:AssumeRole` permission can assume IAM roles that trust them in their trust policy. We refer to this as two-way trust, or bidirec...",
+          "services": [
+            "sts"
+          ],
+          "matched_permissions": [
+            "sts:assumerole"
+          ]
+        }
+      ],
+      "total_permissions": 13
+    },
+    {
+      "role_name": "SO0111-CreateIAMSupportRole-asr",
+      "role_arn": "arn:aws:iam::089930078162:role/SO0111-CreateIAMSupportRole-asr",
+      "findings": [
+        {
+          "pattern": "iam:AttachRolePolicy",
+          "category": "self-escalation",
+          "severity": "CRITICAL",
+          "description": "A principal with `iam:AttachRolePolicy` can attach AWS managed policies (including AdministratorAccess) or customer-managed policies to IAM roles. If...",
+          "services": [
+            "iam"
+          ],
+          "matched_permissions": [
+            "iam:attachrolepolicy"
+          ]
+        },
+        {
+          "pattern": "sts:AssumeRole",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `sts:AssumeRole` permission can assume IAM roles that trust them in their trust policy. We refer to this as two-way trust, or bidirec...",
+          "services": [
+            "sts"
+          ],
+          "matched_permissions": [
+            "sts:assumerole"
+          ]
+        }
+      ],
+      "total_permissions": 12
+    },
+    {
+      "role_name": "SO0111-DisablePublicAccessForSecurityGroup-asr",
+      "role_arn": "arn:aws:iam::089930078162:role/SO0111-DisablePublicAccessForSecurityGroup-asr",
+      "findings": [
+        {
+          "pattern": "sts:AssumeRole",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `sts:AssumeRole` permission can assume IAM roles that trust them in their trust policy. We refer to this as two-way trust, or bidirec...",
+          "services": [
+            "sts"
+          ],
+          "matched_permissions": [
+            "sts:assumerole"
+          ]
+        }
+      ],
+      "total_permissions": 14
+    },
+    {
+      "role_name": "SO0111-DisablePublicAccessToRedshiftCluster-asr",
+      "role_arn": "arn:aws:iam::089930078162:role/SO0111-DisablePublicAccessToRedshiftCluster-asr",
+      "findings": [
+        {
+          "pattern": "sts:AssumeRole",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `sts:AssumeRole` permission can assume IAM roles that trust them in their trust policy. We refer to this as two-way trust, or bidirec...",
+          "services": [
+            "sts"
+          ],
+          "matched_permissions": [
+            "sts:assumerole"
+          ]
+        }
+      ],
+      "total_permissions": 23
+    },
+    {
+      "role_name": "SO0111-ConfigureS3PublicAccessBlock-asr",
+      "role_arn": "arn:aws:iam::089930078162:role/SO0111-ConfigureS3PublicAccessBlock-asr",
+      "findings": [
+        {
+          "pattern": "sts:AssumeRole",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `sts:AssumeRole` permission can assume IAM roles that trust them in their trust policy. We refer to this as two-way trust, or bidirec...",
+          "services": [
+            "sts"
+          ],
+          "matched_permissions": [
+            "sts:assumerole"
+          ]
+        }
+      ],
+      "total_permissions": 10
+    },
+    {
+      "role_name": "SO0111-DisablePublicIPAutoAssign-asr",
+      "role_arn": "arn:aws:iam::089930078162:role/SO0111-DisablePublicIPAutoAssign-asr",
+      "findings": [
+        {
+          "pattern": "sts:AssumeRole",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `sts:AssumeRole` permission can assume IAM roles that trust them in their trust policy. We refer to this as two-way trust, or bidirec...",
+          "services": [
+            "sts"
+          ],
+          "matched_permissions": [
+            "sts:assumerole"
+          ]
+        }
+      ],
+      "total_permissions": 10
+    },
+    {
+      "role_name": "SO0111-DisableTGWAutoAcceptSharedAttachments-asr",
+      "role_arn": "arn:aws:iam::089930078162:role/SO0111-DisableTGWAutoAcceptSharedAttachments-asr",
+      "findings": [
+        {
+          "pattern": "sts:AssumeRole",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `sts:AssumeRole` permission can assume IAM roles that trust them in their trust policy. We refer to this as two-way trust, or bidirec...",
+          "services": [
+            "sts"
+          ],
+          "matched_permissions": [
+            "sts:assumerole"
+          ]
+        }
+      ],
+      "total_permissions": 10
+    },
+    {
+      "role_name": "SO0111-EnableAPIGatewayCacheDataEncryption-asr",
+      "role_arn": "arn:aws:iam::089930078162:role/SO0111-EnableAPIGatewayCacheDataEncryption-asr",
+      "findings": [
+        {
+          "pattern": "sts:AssumeRole",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `sts:AssumeRole` permission can assume IAM roles that trust them in their trust policy. We refer to this as two-way trust, or bidirec...",
+          "services": [
+            "sts"
+          ],
+          "matched_permissions": [
+            "sts:assumerole"
+          ]
+        }
+      ],
+      "total_permissions": 10
+    },
+    {
+      "role_name": "SO0111-EnableAPIGatewayExecutionLogs-asr",
+      "role_arn": "arn:aws:iam::089930078162:role/SO0111-EnableAPIGatewayExecutionLogs-asr",
+      "findings": [
+        {
+          "pattern": "sts:AssumeRole",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `sts:AssumeRole` permission can assume IAM roles that trust them in their trust policy. We refer to this as two-way trust, or bidirec...",
+          "services": [
+            "sts"
+          ],
+          "matched_permissions": [
+            "sts:assumerole"
+          ]
+        }
+      ],
+      "total_permissions": 10
+    },
+    {
+      "role_name": "SO0111-DisablePublicAccessToRDSInstance-asr",
+      "role_arn": "arn:aws:iam::089930078162:role/SO0111-DisablePublicAccessToRDSInstance-asr",
+      "findings": [
+        {
+          "pattern": "sts:AssumeRole",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `sts:AssumeRole` permission can assume IAM roles that trust them in their trust policy. We refer to this as two-way trust, or bidirec...",
+          "services": [
+            "sts"
+          ],
+          "matched_permissions": [
+            "sts:assumerole"
+          ]
+        }
+      ],
+      "total_permissions": 20
+    },
+    {
+      "role_name": "SO0111-DisableUnrestrictedAccessToHighRiskPorts-asr",
+      "role_arn": "arn:aws:iam::089930078162:role/SO0111-DisableUnrestrictedAccessToHighRiskPorts-asr",
+      "findings": [
+        {
+          "pattern": "sts:AssumeRole",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `sts:AssumeRole` permission can assume IAM roles that trust them in their trust policy. We refer to this as two-way trust, or bidirec...",
+          "services": [
+            "sts"
+          ],
+          "matched_permissions": [
+            "sts:assumerole"
+          ]
+        }
+      ],
+      "total_permissions": 10
+    },
+    {
+      "role_name": "SO0111-EnableAutomaticVersionUpgradeOnRedshiftCluster-asr",
+      "role_arn": "arn:aws:iam::089930078162:role/SO0111-EnableAutomaticVersionUpgradeOnRedshiftCluster-asr",
+      "findings": [
+        {
+          "pattern": "sts:AssumeRole",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `sts:AssumeRole` permission can assume IAM roles that trust them in their trust policy. We refer to this as two-way trust, or bidirec...",
+          "services": [
+            "sts"
+          ],
+          "matched_permissions": [
+            "sts:assumerole"
+          ]
+        }
+      ],
+      "total_permissions": 23
+    },
+    {
+      "role_name": "SO0111-EnableAutoSecretRotation-asr",
+      "role_arn": "arn:aws:iam::089930078162:role/SO0111-EnableAutoSecretRotation-asr",
+      "findings": [
+        {
+          "pattern": "sts:AssumeRole",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `sts:AssumeRole` permission can assume IAM roles that trust them in their trust policy. We refer to this as two-way trust, or bidirec...",
+          "services": [
+            "sts"
+          ],
+          "matched_permissions": [
+            "sts:assumerole"
+          ]
+        }
+      ],
+      "total_permissions": 10
+    },
+    {
+      "role_name": "SO0111-CreateLogMetricFilterAndAlarm-asr",
+      "role_arn": "arn:aws:iam::089930078162:role/SO0111-CreateLogMetricFilterAndAlarm-asr",
+      "findings": [
+        {
+          "pattern": "sts:AssumeRole",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `sts:AssumeRole` permission can assume IAM roles that trust them in their trust policy. We refer to this as two-way trust, or bidirec...",
+          "services": [
+            "sts"
+          ],
+          "matched_permissions": [
+            "sts:assumerole"
+          ]
+        }
+      ],
+      "total_permissions": 18
+    },
+    {
+      "role_name": "SO0111-EnableAWSConfig-asr",
+      "role_arn": "arn:aws:iam::089930078162:role/SO0111-EnableAWSConfig-asr",
+      "findings": [
+        {
+          "pattern": "sts:AssumeRole",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `sts:AssumeRole` permission can assume IAM roles that trust them in their trust policy. We refer to this as two-way trust, or bidirec...",
+          "services": [
+            "sts"
+          ],
+          "matched_permissions": [
+            "sts:assumerole"
+          ]
+        }
+      ],
+      "total_permissions": 23
+    },
+    {
+      "role_name": "SO0111-EnableBucketEventNotifications-asr",
+      "role_arn": "arn:aws:iam::089930078162:role/SO0111-EnableBucketEventNotifications-asr",
+      "findings": [
+        {
+          "pattern": "sts:AssumeRole",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `sts:AssumeRole` permission can assume IAM roles that trust them in their trust policy. We refer to this as two-way trust, or bidirec...",
+          "services": [
+            "sts"
+          ],
+          "matched_permissions": [
+            "sts:assumerole"
+          ]
+        }
+      ],
+      "total_permissions": 13
+    },
+    {
+      "role_name": "SO0111-EnableAthenaWorkGroupLogging-asr",
+      "role_arn": "arn:aws:iam::089930078162:role/SO0111-EnableAthenaWorkGroupLogging-asr",
+      "findings": [
+        {
+          "pattern": "sts:AssumeRole",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `sts:AssumeRole` permission can assume IAM roles that trust them in their trust policy. We refer to this as two-way trust, or bidirec...",
+          "services": [
+            "sts"
+          ],
+          "matched_permissions": [
+            "sts:assumerole"
+          ]
+        }
+      ],
+      "total_permissions": 9
+    },
+    {
+      "role_name": "SO0111-EnableCloudTrailEncryption-asr",
+      "role_arn": "arn:aws:iam::089930078162:role/SO0111-EnableCloudTrailEncryption-asr",
+      "findings": [
+        {
+          "pattern": "iam:AttachRolePolicy",
+          "category": "self-escalation",
+          "severity": "CRITICAL",
+          "description": "A principal with `iam:AttachRolePolicy` can attach AWS managed policies (including AdministratorAccess) or customer-managed policies to IAM roles. If...",
+          "services": [
+            "iam"
+          ],
+          "matched_permissions": [
+            "iam:attachrolepolicy"
+          ]
+        },
+        {
+          "pattern": "iam:PutRolePolicy",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `iam:PutRolePolicy` can create or update inline policies on any IAM role. By adding a policy with administrative permissions to a ro...",
+          "services": [
+            "iam"
+          ],
+          "matched_permissions": [
+            "iam:putrolepolicy"
+          ]
+        },
+        {
+          "pattern": "sts:AssumeRole",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `sts:AssumeRole` permission can assume IAM roles that trust them in their trust policy. We refer to this as two-way trust, or bidirec...",
+          "services": [
+            "sts"
+          ],
+          "matched_permissions": [
+            "sts:assumerole"
+          ]
+        }
+      ],
+      "total_permissions": 14
+    },
+    {
+      "role_name": "SO0111-EnableCloudTrailToCloudWatchLogging-asr",
+      "role_arn": "arn:aws:iam::089930078162:role/SO0111-EnableCloudTrailToCloudWatchLogging-asr",
+      "findings": [
+        {
+          "pattern": "iam:AttachRolePolicy",
+          "category": "self-escalation",
+          "severity": "CRITICAL",
+          "description": "A principal with `iam:AttachRolePolicy` can attach AWS managed policies (including AdministratorAccess) or customer-managed policies to IAM roles. If...",
+          "services": [
+            "iam"
+          ],
+          "matched_permissions": [
+            "iam:attachrolepolicy"
+          ]
+        },
+        {
+          "pattern": "iam:PutRolePolicy",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `iam:PutRolePolicy` can create or update inline policies on any IAM role. By adding a policy with administrative permissions to a ro...",
+          "services": [
+            "iam"
+          ],
+          "matched_permissions": [
+            "iam:putrolepolicy"
+          ]
+        },
+        {
+          "pattern": "sts:AssumeRole",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `sts:AssumeRole` permission can assume IAM roles that trust them in their trust policy. We refer to this as two-way trust, or bidirec...",
+          "services": [
+            "sts"
+          ],
+          "matched_permissions": [
+            "sts:assumerole"
+          ]
+        }
+      ],
+      "total_permissions": 19
+    },
+    {
+      "role_name": "SO0111-EnableDeliveryStatusLoggingForSNSTopic-asr",
+      "role_arn": "arn:aws:iam::089930078162:role/SO0111-EnableDeliveryStatusLoggingForSNSTopic-asr",
+      "findings": [
+        {
+          "pattern": "sts:AssumeRole",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `sts:AssumeRole` permission can assume IAM roles that trust them in their trust policy. We refer to this as two-way trust, or bidirec...",
+          "services": [
+            "sts"
+          ],
+          "matched_permissions": [
+            "sts:assumerole"
+          ]
+        }
+      ],
+      "total_permissions": 11
+    },
+    {
+      "role_name": "SO0111-EnableEbsEncryptionByDefault-asr",
+      "role_arn": "arn:aws:iam::089930078162:role/SO0111-EnableEbsEncryptionByDefault-asr",
+      "findings": [
+        {
+          "pattern": "sts:AssumeRole",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `sts:AssumeRole` permission can assume IAM roles that trust them in their trust policy. We refer to this as two-way trust, or bidirec...",
+          "services": [
+            "sts"
+          ],
+          "matched_permissions": [
+            "sts:assumerole"
+          ]
+        }
+      ],
+      "total_permissions": 10
+    },
+    {
+      "role_name": "SO0111-EnableAutoScalingGroupELBHealthCheck-asr",
+      "role_arn": "arn:aws:iam::089930078162:role/SO0111-EnableAutoScalingGroupELBHealthCheck-asr",
+      "findings": [
+        {
+          "pattern": "sts:AssumeRole",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `sts:AssumeRole` permission can assume IAM roles that trust them in their trust policy. We refer to this as two-way trust, or bidirec...",
+          "services": [
+            "sts"
+          ],
+          "matched_permissions": [
+            "sts:assumerole"
+          ]
+        }
+      ],
+      "total_permissions": 10
+    },
+    {
+      "role_name": "SO0111-EnableCopyTagsToSnapshotOnRDSCluster-asr",
+      "role_arn": "arn:aws:iam::089930078162:role/SO0111-EnableCopyTagsToSnapshotOnRDSCluster-asr",
+      "findings": [
+        {
+          "pattern": "sts:AssumeRole",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `sts:AssumeRole` permission can assume IAM roles that trust them in their trust policy. We refer to this as two-way trust, or bidirec...",
+          "services": [
+            "sts"
+          ],
+          "matched_permissions": [
+            "sts:assumerole"
+          ]
+        }
+      ],
+      "total_permissions": 21
+    },
+    {
+      "role_name": "SO0111-EnableDefaultEncryptionS3-asr",
+      "role_arn": "arn:aws:iam::089930078162:role/SO0111-EnableDefaultEncryptionS3-asr",
+      "findings": [
+        {
+          "pattern": "sts:AssumeRole",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `sts:AssumeRole` permission can assume IAM roles that trust them in their trust policy. We refer to this as two-way trust, or bidirec...",
+          "services": [
+            "sts"
+          ],
+          "matched_permissions": [
+            "sts:assumerole"
+          ]
+        }
+      ],
+      "total_permissions": 10
+    },
+    {
+      "role_name": "SO0111-EnableElastiCacheBackups-asr",
+      "role_arn": "arn:aws:iam::089930078162:role/SO0111-EnableElastiCacheBackups-asr",
+      "findings": [
+        {
+          "pattern": "sts:AssumeRole",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `sts:AssumeRole` permission can assume IAM roles that trust them in their trust policy. We refer to this as two-way trust, or bidirec...",
+          "services": [
+            "sts"
+          ],
+          "matched_permissions": [
+            "sts:assumerole"
+          ]
+        }
+      ],
+      "total_permissions": 11
+    },
+    {
+      "role_name": "SO0111-EnableElastiCacheReplicationGroupFailover-asr",
+      "role_arn": "arn:aws:iam::089930078162:role/SO0111-EnableElastiCacheReplicationGroupFailover-asr",
+      "findings": [
+        {
+          "pattern": "sts:AssumeRole",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `sts:AssumeRole` permission can assume IAM roles that trust them in their trust policy. We refer to this as two-way trust, or bidirec...",
+          "services": [
+            "sts"
+          ],
+          "matched_permissions": [
+            "sts:assumerole"
+          ]
+        }
+      ],
+      "total_permissions": 9
+    },
+    {
+      "role_name": "SO0111-EnableDynamoDBDeletionProtection-asr",
+      "role_arn": "arn:aws:iam::089930078162:role/SO0111-EnableDynamoDBDeletionProtection-asr",
+      "findings": [
+        {
+          "pattern": "sts:AssumeRole",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `sts:AssumeRole` permission can assume IAM roles that trust them in their trust policy. We refer to this as two-way trust, or bidirec...",
+          "services": [
+            "sts"
+          ],
+          "matched_permissions": [
+            "sts:assumerole"
+          ]
+        }
+      ],
+      "total_permissions": 9
+    },
+    {
+      "role_name": "SO0111-EnableAutomaticSnapshotsOnRedshiftCluster-asr",
+      "role_arn": "arn:aws:iam::089930078162:role/SO0111-EnableAutomaticSnapshotsOnRedshiftCluster-asr",
+      "findings": [
+        {
+          "pattern": "sts:AssumeRole",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `sts:AssumeRole` permission can assume IAM roles that trust them in their trust policy. We refer to this as two-way trust, or bidirec...",
+          "services": [
+            "sts"
+          ],
+          "matched_permissions": [
+            "sts:assumerole"
+          ]
+        }
+      ],
+      "total_permissions": 23
+    },
+    {
+      "role_name": "SO0111-EnableGuardDuty-asr",
+      "role_arn": "arn:aws:iam::089930078162:role/SO0111-EnableGuardDuty-asr",
+      "findings": [
+        {
+          "pattern": "iam:PutRolePolicy",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `iam:PutRolePolicy` can create or update inline policies on any IAM role. By adding a policy with administrative permissions to a ro...",
+          "services": [
+            "iam"
+          ],
+          "matched_permissions": [
+            "iam:putrolepolicy"
+          ]
+        },
+        {
+          "pattern": "sts:AssumeRole",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `sts:AssumeRole` permission can assume IAM roles that trust them in their trust policy. We refer to this as two-way trust, or bidirec...",
+          "services": [
+            "sts"
+          ],
+          "matched_permissions": [
+            "sts:assumerole"
+          ]
+        }
+      ],
+      "total_permissions": 15
+    },
+    {
+      "role_name": "SO0111-EnableCloudTrailLogFileValidation-asr",
+      "role_arn": "arn:aws:iam::089930078162:role/SO0111-EnableCloudTrailLogFileValidation-asr",
+      "findings": [
+        {
+          "pattern": "iam:AttachRolePolicy",
+          "category": "self-escalation",
+          "severity": "CRITICAL",
+          "description": "A principal with `iam:AttachRolePolicy` can attach AWS managed policies (including AdministratorAccess) or customer-managed policies to IAM roles. If...",
+          "services": [
+            "iam"
+          ],
+          "matched_permissions": [
+            "iam:attachrolepolicy"
+          ]
+        },
+        {
+          "pattern": "iam:PutRolePolicy",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `iam:PutRolePolicy` can create or update inline policies on any IAM role. By adding a policy with administrative permissions to a ro...",
+          "services": [
+            "iam"
+          ],
+          "matched_permissions": [
+            "iam:putrolepolicy"
+          ]
+        },
+        {
+          "pattern": "sts:AssumeRole",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `sts:AssumeRole` permission can assume IAM roles that trust them in their trust policy. We refer to this as two-way trust, or bidirec...",
+          "services": [
+            "sts"
+          ],
+          "matched_permissions": [
+            "sts:assumerole"
+          ]
+        }
+      ],
+      "total_permissions": 15
+    },
+    {
+      "role_name": "SO0111-EnableEncryptionForSQSQueue-asr",
+      "role_arn": "arn:aws:iam::089930078162:role/SO0111-EnableEncryptionForSQSQueue-asr",
+      "findings": [
+        {
+          "pattern": "sts:AssumeRole",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `sts:AssumeRole` permission can assume IAM roles that trust them in their trust policy. We refer to this as two-way trust, or bidirec...",
+          "services": [
+            "sts"
+          ],
+          "matched_permissions": [
+            "sts:assumerole"
+          ]
+        }
+      ],
+      "total_permissions": 11
+    },
+    {
+      "role_name": "SO0111-EnableEnhancedMonitoringOnRDSInstance-asr",
+      "role_arn": "arn:aws:iam::089930078162:role/SO0111-EnableEnhancedMonitoringOnRDSInstance-asr",
+      "findings": [
+        {
+          "pattern": "sts:AssumeRole",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `sts:AssumeRole` permission can assume IAM roles that trust them in their trust policy. We refer to this as two-way trust, or bidirec...",
+          "services": [
+            "sts"
+          ],
+          "matched_permissions": [
+            "sts:assumerole"
+          ]
+        }
+      ],
+      "total_permissions": 20
+    },
+    {
+      "role_name": "SO0111-EnableCloudFrontDefaultRootObject-asr",
+      "role_arn": "arn:aws:iam::089930078162:role/SO0111-EnableCloudFrontDefaultRootObject-asr",
+      "findings": [
+        {
+          "pattern": "sts:AssumeRole",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `sts:AssumeRole` permission can assume IAM roles that trust them in their trust policy. We refer to this as two-way trust, or bidirec...",
+          "services": [
+            "sts"
+          ],
+          "matched_permissions": [
+            "sts:assumerole"
+          ]
+        }
+      ],
+      "total_permissions": 10
+    },
+    {
+      "role_name": "SO0111-EnableKeyRotation-asr",
+      "role_arn": "arn:aws:iam::089930078162:role/SO0111-EnableKeyRotation-asr",
+      "findings": [
+        {
+          "pattern": "sts:AssumeRole",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `sts:AssumeRole` permission can assume IAM roles that trust them in their trust policy. We refer to this as two-way trust, or bidirec...",
+          "services": [
+            "sts"
+          ],
+          "matched_permissions": [
+            "sts:assumerole"
+          ]
+        }
+      ],
+      "total_permissions": 10
+    },
+    {
+      "role_name": "SO0111-EnableMinorVersionUpgradeOnRDSDBInstance-asr",
+      "role_arn": "arn:aws:iam::089930078162:role/SO0111-EnableMinorVersionUpgradeOnRDSDBInstance-asr",
+      "findings": [
+        {
+          "pattern": "sts:AssumeRole",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `sts:AssumeRole` permission can assume IAM roles that trust them in their trust policy. We refer to this as two-way trust, or bidirec...",
+          "services": [
+            "sts"
+          ],
+          "matched_permissions": [
+            "sts:assumerole"
+          ]
+        }
+      ],
+      "total_permissions": 22
+    },
+    {
+      "role_name": "SO0111-EnableElastiCacheVersionUpgrades-asr",
+      "role_arn": "arn:aws:iam::089930078162:role/SO0111-EnableElastiCacheVersionUpgrades-asr",
+      "findings": [
+        {
+          "pattern": "sts:AssumeRole",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `sts:AssumeRole` permission can assume IAM roles that trust them in their trust policy. We refer to this as two-way trust, or bidirec...",
+          "services": [
+            "sts"
+          ],
+          "matched_permissions": [
+            "sts:assumerole"
+          ]
+        }
+      ],
+      "total_permissions": 9
+    },
+    {
+      "role_name": "SO0111-EnableIMDSV2OnInstance-asr",
+      "role_arn": "arn:aws:iam::089930078162:role/SO0111-EnableIMDSV2OnInstance-asr",
+      "findings": [
+        {
+          "pattern": "sts:AssumeRole",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `sts:AssumeRole` permission can assume IAM roles that trust them in their trust policy. We refer to this as two-way trust, or bidirec...",
+          "services": [
+            "sts"
+          ],
+          "matched_permissions": [
+            "sts:assumerole"
+          ]
+        }
+      ],
+      "total_permissions": 10
+    },
+    {
+      "role_name": "SO0111-EnableEncryptionForSNSTopic-asr",
+      "role_arn": "arn:aws:iam::089930078162:role/SO0111-EnableEncryptionForSNSTopic-asr",
+      "findings": [
+        {
+          "pattern": "sts:AssumeRole",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `sts:AssumeRole` permission can assume IAM roles that trust them in their trust policy. We refer to this as two-way trust, or bidirec...",
+          "services": [
+            "sts"
+          ],
+          "matched_permissions": [
+            "sts:assumerole"
+          ]
+        }
+      ],
+      "total_permissions": 10
+    },
+    {
+      "role_name": "SO0111-EnableMacie-asr",
+      "role_arn": "arn:aws:iam::089930078162:role/SO0111-EnableMacie-asr",
+      "findings": [
+        {
+          "pattern": "iam:AttachRolePolicy",
+          "category": "self-escalation",
+          "severity": "CRITICAL",
+          "description": "A principal with `iam:AttachRolePolicy` can attach AWS managed policies (including AdministratorAccess) or customer-managed policies to IAM roles. If...",
+          "services": [
+            "iam"
+          ],
+          "matched_permissions": [
+            "iam:attachrolepolicy"
+          ]
+        },
+        {
+          "pattern": "iam:PutRolePolicy",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `iam:PutRolePolicy` can create or update inline policies on any IAM role. By adding a policy with administrative permissions to a ro...",
+          "services": [
+            "iam"
+          ],
+          "matched_permissions": [
+            "iam:putrolepolicy"
+          ]
+        },
+        {
+          "pattern": "sts:AssumeRole",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `sts:AssumeRole` permission can assume IAM roles that trust them in their trust policy. We refer to this as two-way trust, or bidirec...",
+          "services": [
+            "sts"
+          ],
+          "matched_permissions": [
+            "sts:assumerole"
+          ]
+        }
+      ],
+      "total_permissions": 12
+    },
+    {
+      "role_name": "SO0111-EnableMultiAZOnRDSInstance-asr",
+      "role_arn": "arn:aws:iam::089930078162:role/SO0111-EnableMultiAZOnRDSInstance-asr",
+      "findings": [
+        {
+          "pattern": "sts:AssumeRole",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `sts:AssumeRole` permission can assume IAM roles that trust them in their trust policy. We refer to this as two-way trust, or bidirec...",
+          "services": [
+            "sts"
+          ],
+          "matched_permissions": [
+            "sts:assumerole"
+          ]
+        }
+      ],
+      "total_permissions": 20
+    },
+    {
+      "role_name": "SO0111-EnableRDSClusterDeletionProtection-asr",
+      "role_arn": "arn:aws:iam::089930078162:role/SO0111-EnableRDSClusterDeletionProtection-asr",
+      "findings": [
+        {
+          "pattern": "sts:AssumeRole",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `sts:AssumeRole` permission can assume IAM roles that trust them in their trust policy. We refer to this as two-way trust, or bidirec...",
+          "services": [
+            "sts"
+          ],
+          "matched_permissions": [
+            "sts:assumerole"
+          ]
+        }
+      ],
+      "total_permissions": 22
+    },
+    {
+      "role_name": "SO0111-EnableRDSInstanceDeletionProtection-asr",
+      "role_arn": "arn:aws:iam::089930078162:role/SO0111-EnableRDSInstanceDeletionProtection-asr",
+      "findings": [
+        {
+          "pattern": "sts:AssumeRole",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `sts:AssumeRole` permission can assume IAM roles that trust them in their trust policy. We refer to this as two-way trust, or bidirec...",
+          "services": [
+            "sts"
+          ],
+          "matched_permissions": [
+            "sts:assumerole"
+          ]
+        }
+      ],
+      "total_permissions": 20
+    },
+    {
+      "role_name": "SO0111-EnableRedshiftClusterAuditLogging-asr",
+      "role_arn": "arn:aws:iam::089930078162:role/SO0111-EnableRedshiftClusterAuditLogging-asr",
+      "findings": [
+        {
+          "pattern": "sts:AssumeRole",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `sts:AssumeRole` permission can assume IAM roles that trust them in their trust policy. We refer to this as two-way trust, or bidirec...",
+          "services": [
+            "sts"
+          ],
+          "matched_permissions": [
+            "sts:assumerole"
+          ]
+        }
+      ],
+      "total_permissions": 11
+    },
+    {
+      "role_name": "SO0111-EnablePrivateRepositoryScanning-asr",
+      "role_arn": "arn:aws:iam::089930078162:role/SO0111-EnablePrivateRepositoryScanning-asr",
+      "findings": [
+        {
+          "pattern": "sts:AssumeRole",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `sts:AssumeRole` permission can assume IAM roles that trust them in their trust policy. We refer to this as two-way trust, or bidirec...",
+          "services": [
+            "sts"
+          ],
+          "matched_permissions": [
+            "sts:assumerole"
+          ]
+        }
+      ],
+      "total_permissions": 9
+    },
+    {
+      "role_name": "SO0111-EnableVPCFlowLogs-asr",
+      "role_arn": "arn:aws:iam::089930078162:role/SO0111-EnableVPCFlowLogs-asr",
+      "findings": [
+        {
+          "pattern": "sts:AssumeRole",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `sts:AssumeRole` permission can assume IAM roles that trust them in their trust policy. We refer to this as two-way trust, or bidirec...",
+          "services": [
+            "sts"
+          ],
+          "matched_permissions": [
+            "sts:assumerole"
+          ]
+        }
+      ],
+      "total_permissions": 12
+    },
+    {
+      "role_name": "SO0111-EncryptRDSSnapshot-asr",
+      "role_arn": "arn:aws:iam::089930078162:role/SO0111-EncryptRDSSnapshot-asr",
+      "findings": [
+        {
+          "pattern": "sts:AssumeRole",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `sts:AssumeRole` permission can assume IAM roles that trust them in their trust policy. We refer to this as two-way trust, or bidirec...",
+          "services": [
+            "sts"
+          ],
+          "matched_permissions": [
+            "sts:assumerole"
+          ]
+        }
+      ],
+      "total_permissions": 16
+    },
+    {
+      "role_name": "SO0111-EnforceHTTPSForALB-asr",
+      "role_arn": "arn:aws:iam::089930078162:role/SO0111-EnforceHTTPSForALB-asr",
+      "findings": [
+        {
+          "pattern": "sts:AssumeRole",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `sts:AssumeRole` permission can assume IAM roles that trust them in their trust policy. We refer to this as two-way trust, or bidirec...",
+          "services": [
+            "sts"
+          ],
+          "matched_permissions": [
+            "sts:assumerole"
+          ]
+        }
+      ],
+      "total_permissions": 12
+    },
+    {
+      "role_name": "SO0111-LimitECSRootFilesystemAccess-asr",
+      "role_arn": "arn:aws:iam::089930078162:role/SO0111-LimitECSRootFilesystemAccess-asr",
+      "findings": [
+        {
+          "pattern": "sts:AssumeRole",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `sts:AssumeRole` permission can assume IAM roles that trust them in their trust policy. We refer to this as two-way trust, or bidirec...",
+          "services": [
+            "sts"
+          ],
+          "matched_permissions": [
+            "sts:assumerole"
+          ]
+        }
+      ],
+      "total_permissions": 10
+    },
+    {
+      "role_name": "SO0111-ReplaceCodeBuildClearTextCredentials-asr",
+      "role_arn": "arn:aws:iam::089930078162:role/SO0111-ReplaceCodeBuildClearTextCredentials-asr",
+      "findings": [
+        {
+          "pattern": "iam:AttachRolePolicy",
+          "category": "self-escalation",
+          "severity": "CRITICAL",
+          "description": "A principal with `iam:AttachRolePolicy` can attach AWS managed policies (including AdministratorAccess) or customer-managed policies to IAM roles. If...",
+          "services": [
+            "iam"
+          ],
+          "matched_permissions": [
+            "iam:attachrolepolicy"
+          ]
+        },
+        {
+          "pattern": "sts:AssumeRole",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `sts:AssumeRole` permission can assume IAM roles that trust them in their trust policy. We refer to this as two-way trust, or bidirec...",
+          "services": [
+            "sts"
+          ],
+          "matched_permissions": [
+            "sts:assumerole"
+          ]
+        }
+      ],
+      "total_permissions": 12
+    },
+    {
+      "role_name": "SO0111-MakeRDSSnapshotPrivate-asr",
+      "role_arn": "arn:aws:iam::089930078162:role/SO0111-MakeRDSSnapshotPrivate-asr",
+      "findings": [
+        {
+          "pattern": "sts:AssumeRole",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `sts:AssumeRole` permission can assume IAM roles that trust them in their trust policy. We refer to this as two-way trust, or bidirec...",
+          "services": [
+            "sts"
+          ],
+          "matched_permissions": [
+            "sts:assumerole"
+          ]
+        }
+      ],
+      "total_permissions": 10
+    },
+    {
+      "role_name": "SO0111-RevokeUnusedIAMUserCredentials-asr",
+      "role_arn": "arn:aws:iam::089930078162:role/SO0111-RevokeUnusedIAMUserCredentials-asr",
+      "findings": [
+        {
+          "pattern": "sts:AssumeRole",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `sts:AssumeRole` permission can assume IAM roles that trust them in their trust policy. We refer to this as two-way trust, or bidirec...",
+          "services": [
+            "sts"
+          ],
+          "matched_permissions": [
+            "sts:assumerole"
+          ]
+        }
+      ],
+      "total_permissions": 15
+    },
+    {
+      "role_name": "SO0111-RemoveUnusedSecret-asr",
+      "role_arn": "arn:aws:iam::089930078162:role/SO0111-RemoveUnusedSecret-asr",
+      "findings": [
+        {
+          "pattern": "sts:AssumeRole",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `sts:AssumeRole` permission can assume IAM roles that trust them in their trust policy. We refer to this as two-way trust, or bidirec...",
+          "services": [
+            "sts"
+          ],
+          "matched_permissions": [
+            "sts:assumerole"
+          ]
+        }
+      ],
+      "total_permissions": 10
+    },
+    {
+      "role_name": "SO0111-RemoveVPCDefaultSecurityGroupRules-asr",
+      "role_arn": "arn:aws:iam::089930078162:role/SO0111-RemoveVPCDefaultSecurityGroupRules-asr",
+      "findings": [
+        {
+          "pattern": "sts:AssumeRole",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `sts:AssumeRole` permission can assume IAM roles that trust them in their trust policy. We refer to this as two-way trust, or bidirec...",
+          "services": [
+            "sts"
+          ],
+          "matched_permissions": [
+            "sts:assumerole"
+          ]
+        }
+      ],
+      "total_permissions": 14
+    },
+    {
+      "role_name": "SO0111-MakeEBSSnapshotsPrivate-asr",
+      "role_arn": "arn:aws:iam::089930078162:role/SO0111-MakeEBSSnapshotsPrivate-asr",
+      "findings": [
+        {
+          "pattern": "sts:AssumeRole",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `sts:AssumeRole` permission can assume IAM roles that trust them in their trust policy. We refer to this as two-way trust, or bidirec...",
+          "services": [
+            "sts"
+          ],
+          "matched_permissions": [
+            "sts:assumerole"
+          ]
+        }
+      ],
+      "total_permissions": 10
+    },
+    {
+      "role_name": "SO0111-RevokeUnauthorizedInboundRules-asr",
+      "role_arn": "arn:aws:iam::089930078162:role/SO0111-RevokeUnauthorizedInboundRules-asr",
+      "findings": [
+        {
+          "pattern": "sts:AssumeRole",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `sts:AssumeRole` permission can assume IAM roles that trust them in their trust policy. We refer to this as two-way trust, or bidirec...",
+          "services": [
+            "sts"
+          ],
+          "matched_permissions": [
+            "sts:assumerole"
+          ]
+        }
+      ],
+      "total_permissions": 10
+    },
+    {
+      "role_name": "SO0111-RemoveCodeBuildPrivilegedMode-asr",
+      "role_arn": "arn:aws:iam::089930078162:role/SO0111-RemoveCodeBuildPrivilegedMode-asr",
+      "findings": [
+        {
+          "pattern": "sts:AssumeRole",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `sts:AssumeRole` permission can assume IAM roles that trust them in their trust policy. We refer to this as two-way trust, or bidirec...",
+          "services": [
+            "sts"
+          ],
+          "matched_permissions": [
+            "sts:assumerole"
+          ]
+        }
+      ],
+      "total_permissions": 10
+    },
+    {
+      "role_name": "SO0111-RevokeUnrotatedKeys-asr",
+      "role_arn": "arn:aws:iam::089930078162:role/SO0111-RevokeUnrotatedKeys-asr",
+      "findings": [
+        {
+          "pattern": "sts:AssumeRole",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `sts:AssumeRole` permission can assume IAM roles that trust them in their trust policy. We refer to this as two-way trust, or bidirec...",
+          "services": [
+            "sts"
+          ],
+          "matched_permissions": [
+            "sts:assumerole"
+          ]
+        }
+      ],
+      "total_permissions": 13
+    },
+    {
+      "role_name": "SO0111-SetCloudFrontOriginDomain-asr",
+      "role_arn": "arn:aws:iam::089930078162:role/SO0111-SetCloudFrontOriginDomain-asr",
+      "findings": [
+        {
+          "pattern": "sts:AssumeRole",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `sts:AssumeRole` permission can assume IAM roles that trust them in their trust policy. We refer to this as two-way trust, or bidirec...",
+          "services": [
+            "sts"
+          ],
+          "matched_permissions": [
+            "sts:assumerole"
+          ]
+        }
+      ],
+      "total_permissions": 10
+    },
+    {
+      "role_name": "SO0111-RemoveLambdaPublicAccess-asr",
+      "role_arn": "arn:aws:iam::089930078162:role/SO0111-RemoveLambdaPublicAccess-asr",
+      "findings": [
+        {
+          "pattern": "sts:AssumeRole",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `sts:AssumeRole` permission can assume IAM roles that trust them in their trust policy. We refer to this as two-way trust, or bidirec...",
+          "services": [
+            "sts"
+          ],
+          "matched_permissions": [
+            "sts:assumerole"
+          ]
+        }
+      ],
+      "total_permissions": 10
+    },
+    {
+      "role_name": "SO0111-SetIAMPasswordPolicy-asr",
+      "role_arn": "arn:aws:iam::089930078162:role/SO0111-SetIAMPasswordPolicy-asr",
+      "findings": [
+        {
+          "pattern": "sts:AssumeRole",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `sts:AssumeRole` permission can assume IAM roles that trust them in their trust policy. We refer to this as two-way trust, or bidirec...",
+          "services": [
+            "sts"
+          ],
+          "matched_permissions": [
+            "sts:assumerole"
+          ]
+        }
+      ],
+      "total_permissions": 13
+    },
+    {
+      "role_name": "SO0111-SetLogGroupRetentionDays-asr",
+      "role_arn": "arn:aws:iam::089930078162:role/SO0111-SetLogGroupRetentionDays-asr",
+      "findings": [
+        {
+          "pattern": "sts:AssumeRole",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `sts:AssumeRole` permission can assume IAM roles that trust them in their trust policy. We refer to this as two-way trust, or bidirec...",
+          "services": [
+            "sts"
+          ],
+          "matched_permissions": [
+            "sts:assumerole"
+          ]
+        }
+      ],
+      "total_permissions": 9
+    },
+    {
+      "role_name": "SO0111-SetSSLBucketPolicy-asr",
+      "role_arn": "arn:aws:iam::089930078162:role/SO0111-SetSSLBucketPolicy-asr",
+      "findings": [
+        {
+          "pattern": "sts:AssumeRole",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `sts:AssumeRole` permission can assume IAM roles that trust them in their trust policy. We refer to this as two-way trust, or bidirec...",
+          "services": [
+            "sts"
+          ],
+          "matched_permissions": [
+            "sts:assumerole"
+          ]
+        }
+      ],
+      "total_permissions": 10
+    },
+    {
+      "role_name": "SO0111-TagDynamoDBTableResource-asr",
+      "role_arn": "arn:aws:iam::089930078162:role/SO0111-TagDynamoDBTableResource-asr",
+      "findings": [
+        {
+          "pattern": "sts:AssumeRole",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `sts:AssumeRole` permission can assume IAM roles that trust them in their trust policy. We refer to this as two-way trust, or bidirec...",
+          "services": [
+            "sts"
+          ],
+          "matched_permissions": [
+            "sts:assumerole"
+          ]
+        }
+      ],
+      "total_permissions": 9
+    },
+    {
+      "role_name": "SO0111-S3BlockDenylist-asr",
+      "role_arn": "arn:aws:iam::089930078162:role/SO0111-S3BlockDenylist-asr",
+      "findings": [
+        {
+          "pattern": "sts:AssumeRole",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `sts:AssumeRole` permission can assume IAM roles that trust them in their trust policy. We refer to this as two-way trust, or bidirec...",
+          "services": [
+            "sts"
+          ],
+          "matched_permissions": [
+            "sts:assumerole"
+          ]
+        }
+      ],
+      "total_permissions": 10
+    },
+    {
+      "role_name": "SO0111-TagGuardDutyResource-asr",
+      "role_arn": "arn:aws:iam::089930078162:role/SO0111-TagGuardDutyResource-asr",
+      "findings": [
+        {
+          "pattern": "sts:AssumeRole",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `sts:AssumeRole` permission can assume IAM roles that trust them in their trust policy. We refer to this as two-way trust, or bidirec...",
+          "services": [
+            "sts"
+          ],
+          "matched_permissions": [
+            "sts:assumerole"
+          ]
+        }
+      ],
+      "total_permissions": 9
+    },
+    {
+      "role_name": "SO0111-TerminateEC2Instance-asr",
+      "role_arn": "arn:aws:iam::089930078162:role/SO0111-TerminateEC2Instance-asr",
+      "findings": [
+        {
+          "pattern": "sts:AssumeRole",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `sts:AssumeRole` permission can assume IAM roles that trust them in their trust policy. We refer to this as two-way trust, or bidirec...",
+          "services": [
+            "sts"
+          ],
+          "matched_permissions": [
+            "sts:assumerole"
+          ]
+        }
+      ],
+      "total_permissions": 10
+    },
+    {
+      "role_name": "SO0111-UpdateSecretRotationPeriod-asr",
+      "role_arn": "arn:aws:iam::089930078162:role/SO0111-UpdateSecretRotationPeriod-asr",
+      "findings": [
+        {
+          "pattern": "sts:AssumeRole",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `sts:AssumeRole` permission can assume IAM roles that trust them in their trust policy. We refer to this as two-way trust, or bidirec...",
+          "services": [
+            "sts"
+          ],
+          "matched_permissions": [
+            "sts:assumerole"
+          ]
+        }
+      ],
+      "total_permissions": 10
+    },
+    {
+      "role_name": "SO0111-SetS3LifecyclePolicy-asr",
+      "role_arn": "arn:aws:iam::089930078162:role/SO0111-SetS3LifecyclePolicy-asr",
+      "findings": [
+        {
+          "pattern": "sts:AssumeRole",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `sts:AssumeRole` permission can assume IAM roles that trust them in their trust policy. We refer to this as two-way trust, or bidirec...",
+          "services": [
+            "sts"
+          ],
+          "matched_permissions": [
+            "sts:assumerole"
+          ]
+        }
+      ],
+      "total_permissions": 10
+    }
+  ],
+  "ignored_role_details": [
+    {
+      "role_name": "aws-controltower-AdministratorExecutionRole",
+      "reason": "Has admin policy: AdministratorAccess"
+    },
+    {
+      "role_name": "AWSControlTowerExecution",
+      "reason": "Has admin policy: AdministratorAccess"
+    },
+    {
+      "role_name": "AWSReservedSSO_AWSAdministratorAccess_6ce89c46fc4f0842",
+      "reason": "Role name matches ignore pattern: AWSReservedSSO_AWSAdministratorAccess"
+    },
+    {
+      "role_name": "aws-controltower-ForwardSnsNotificationRole",
+      "reason": "Standard Service Role (Trusted: lambda.amazonaws.com)"
+    },
+    {
+      "role_name": "aws-controltower-AuditAdministratorRole",
+      "reason": "Standard Service Role (Trusted: lambda.amazonaws.com)"
+    },
+    {
+      "role_name": "aws-controltower-AuditReadOnlyRole",
+      "reason": "Standard Service Role (Trusted: lambda.amazonaws.com)"
+    },
+    {
+      "role_name": "AWSReservedSSO_AWSOrganizationsFullAccess_73d10d58fb4bd092",
+      "reason": "Role name matches ignore pattern: AWSReservedSSO"
+    },
+    {
+      "role_name": "AWSReservedSSO_AWSPowerUserAccess_6bbbc9fb38832ef0",
+      "reason": "Role name matches ignore pattern: AWSReservedSSO"
+    },
+    {
+      "role_name": "AWSReservedSSO_AWSServiceCatalogAdminFullAccess_af4ad5b72dc45312",
+      "reason": "Role name matches ignore pattern: AWSReservedSSO"
+    },
+    {
+      "role_name": "AWSServiceRoleForAmazonGuardDuty",
+      "reason": "Standard Service Role (Trusted: guardduty.amazonaws.com)"
+    },
+    {
+      "role_name": "AWSReservedSSO_AWSServiceCatalogEndUserAccess_0b306691f3a9c7b5",
+      "reason": "Role name matches ignore pattern: AWSReservedSSO"
+    },
+    {
+      "role_name": "AWSServiceRoleForApplicationAutoScaling_DynamoDBTable",
+      "reason": "Standard Service Role (Trusted: dynamodb.application-autoscaling.amazonaws.com)"
+    },
+    {
+      "role_name": "AWSServiceRoleForAWSControlTower",
+      "reason": "Standard Service Role (Trusted: controltower.amazonaws.com)"
+    },
+    {
+      "role_name": "AWSServiceRoleForCloudTrail",
+      "reason": "Standard Service Role (Trusted: cloudtrail.amazonaws.com)"
+    },
+    {
+      "role_name": "AWSServiceRoleForCloudFormationStackSetsOrgMember",
+      "reason": "Role name matches ignore pattern: AWSServiceRoleForCloudFormationStackSetsOrgMember"
+    },
+    {
+      "role_name": "AWSServiceRoleForConfig",
+      "reason": "Standard Service Role (Trusted: config.amazonaws.com)"
+    },
+    {
+      "role_name": "AWSServiceRoleForOrganizations",
+      "reason": "Standard Service Role (Trusted: organizations.amazonaws.com)"
+    },
+    {
+      "role_name": "AWSServiceRoleForServiceQuotas",
+      "reason": "Standard Service Role (Trusted: servicequotas.amazonaws.com)"
+    },
+    {
+      "role_name": "AWSServiceRoleForSecurityHub",
+      "reason": "Standard Service Role (Trusted: securityhub.amazonaws.com)"
+    },
+    {
+      "role_name": "AWSServiceRoleForSSO",
+      "reason": "Role name matches ignore pattern: AWSServiceRoleForSSO"
+    },
+    {
+      "role_name": "AWSServiceRoleForSupport",
+      "reason": "Standard Service Role (Trusted: support.amazonaws.com)"
+    },
+    {
+      "role_name": "AWSServiceRoleForTrustedAdvisor",
+      "reason": "Standard Service Role (Trusted: trustedadvisor.amazonaws.com)"
+    },
+    {
+      "role_name": "OrganizationAccountAccessRole",
+      "reason": "Role name matches ignore pattern: OrganizationAccountAccessRole"
+    },
+    {
+      "role_name": "Secuhub-FirehoseDeliveryRole-oYESLRVDT27v",
+      "reason": "Empty service role (No permissions attached)"
+    },
+    {
+      "role_name": "Secuhub-LambdaSortRole-jfytwh7f7Suq",
+      "reason": "Standard Service Role (Trusted: lambda.amazonaws.com)"
+    },
+    {
+      "role_name": "Secuhub-SecurityHubLogDeliveryRole-crdCTnrqqCkR",
+      "reason": "Empty service role (No permissions attached)"
+    },
+    {
+      "role_name": "security-automate-WebUINe-ApiConstructAutomatedSecu-zIR8RB472hzc",
+      "reason": "Standard Service Role (Trusted: apigateway.amazonaws.com)"
+    },
+    {
+      "role_name": "SO0111-CloudTrailToCloudWatchLogs-asr",
+      "reason": "Empty service role (No permissions attached)"
+    },
+    {
+      "role_name": "AWSReservedSSO_AWSReadOnlyAccess_806b1f016959489a",
+      "reason": "Role name matches ignore pattern: AWSReservedSSO"
+    },
+    {
+      "role_name": "SO0111-EnableVPCFlowLogs-remediationRole-asr",
+      "reason": "Empty service role (No permissions attached)"
+    },
+    {
+      "role_name": "SO0111-RDSMonitoring-remediationRole-asr",
+      "reason": "Empty service role (No permissions attached)"
+    },
+    {
+      "role_name": "SO0111-SNS2DeliveryStatusLogging-remediationRole-asr",
+      "reason": "Empty service role (No permissions attached)"
+    },
+    {
+      "role_name": "stacksets-exec-a87057de4334ac820b08b46763e1d06f",
+      "reason": "Has admin policy: AdministratorAccess"
+    }
+  ],
+  "total_users": 3,
+  "scanned_users": 3,
+  "ignored_users": 0,
+  "vulnerable_users": [],
+  "ignored_user_details": []
+}
