@@ -1,0 +1,4 @@
+account,role,detect_policy,severity,category,service
+01234567895,demo,ssm:SendCommand,HIGH,existing-passrole,"ssm, ec2"
+01234567895,demo,sts:AssumeRole,CRITICAL,principal-access,sts
+01234567895,EC2_escalation_role,iam:PassRole + ec2:RunInstances,HIGH,new-passrole,"iam, ec2"

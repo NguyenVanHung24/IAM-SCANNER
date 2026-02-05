@@ -1,0 +1,92 @@
+{
+  "account_id": "xxxxxxxxx",
+  "total_roles": 34,
+  "scanned_roles": 8,
+  "ignored_roles": 26,
+  "vulnerable_roles": [
+    {
+      "role_name": "demo",
+      "role_arn": "arn:aws:iam::xxxxxxxxx:role/demo",
+      "findings": [
+        {
+          "pattern": "ssm:SendCommand",
+          "category": "existing-passrole",
+          "severity": "HIGH",
+          "description": "The `ssm:SendCommand` permission allows a principal to execute commands on any EC2 instance on which they have this permission, using SSM Run Command....",
+          "services": [
+            "ssm",
+            "ec2"
+          ],
+          "matched_permissions": [
+            "ssm:sendcommand"
+          ]
+        },
+        {
+          "pattern": "sts:AssumeRole",
+          "category": "principal-access",
+          "severity": "CRITICAL",
+          "description": "A principal with `sts:AssumeRole` permission can assume IAM roles that trust them in their trust policy. We refer to this as two-way trust, or bidirec...",
+          "services": [
+            "sts"
+          ],
+          "matched_permissions": [
+            "sts:assumerole"
+          ]
+        }
+      ],
+      "total_permissions": 12
+    },
+    {
+      "role_name": "EC2_escalation_role",
+      "role_arn": "arn:aws:iam::xxxxxxxxx:role/EC2_escalation_role",
+      "findings": [
+        {
+          "pattern": "iam:PassRole + ec2:RunInstances",
+          "category": "new-passrole",
+          "severity": "HIGH",
+          "description": "A principal with `iam:PassRole` and `ec2:RunInstances` permissions can launch a new EC2 instance and attach an existing IAM Role to it. By accessing ...",
+          "services": [
+            "iam",
+            "ec2"
+          ],
+          "matched_permissions": [
+            "iam:passrole",
+            "ec2:runinstances"
+          ]
+        }
+      ],
+      "total_permissions": 12
+    }
+  ],
+  "ignored_role_details": [
+    {
+      "role_name": "AWSReservedSSO_AWSOrganizationsFullAccess_7760dee035006f68",
+      "reason": "Role name matches ignore pattern: AWSReservedSSO"
+    },
+    {
+      "role_name": "AWSServiceRoleForConfig",
+      "reason": "Standard Service Role (Trusted: config.amazonaws.com)"
+    },
+    {
+      "role_name": "AWSServiceRoleForAWSControlTower",
+      "reason": "Standard Service Role (Trusted: controltower.amazonaws.com)"
+    },
+    {
+      "role_name": "AWSServiceRoleForCloudTrail",
+      "reason": "Standard Service Role (Trusted: cloudtrail.amazonaws.com)"
+    },
+    {
+      "role_name": "AWSReservedSSO_AWSServiceCatalogAdminFullAccess_affddfef3dd11314",
+      "reason": "Role name matches ignore pattern: AWSReservedSSO"
+    },
+    {
+      "role_name": "AWSReservedSSO_AWSReadOnlyAccess_98a961f204328af1",
+      "reason": "Role name matches ignore pattern: AWSReservedSSO"
+    }
+  ],
+  "total_users": 0,
+  "scanned_users": 0,
+  "ignored_users": 0,
+  "vulnerable_users": [],
+  "ignored_user_details": []
+}
